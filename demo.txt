@@ -1,0 +1,60 @@
+json-server --watch db.json 
+
+
+
+
+var app = angular.module('searchApp', []);
+
+app.controller('SearchController', function($scope) {
+  $scope.performSearch = function() {
+    var searchQuery = document.getElementById('searchInput').value;
+    // Perform your search functionality here using 'searchQuery'
+    console.log('Search Query:', searchQuery);
+    // Example: You can use an API call or custom search logic here
+  };
+});
+
+// Capture Enter key press event and trigger search
+document.getElementById('searchInput').addEventListener('keypress', function(event) {
+  if (event.key === 'Enter') {
+    document.getElementById('searchInput').blur(); // Remove focus from input
+    angular.element(document.getElementById('searchInput')).scope().performSearch();
+  }
+});
+
+
+
+Image url for tmdb
+https://image.tmdb.org/t/p/original/dB6Krk806zeqd0YNp2ngQ9zXteH.jpg
+
+Descover movies tmdb 
+https://api.themoviedb.org/3/discover/movie?api_key=974dff81c8800d9dac708b4882d8cbb5&include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc
+
+
+
+logic for trending movies
+  var app = angular.module('trendingApp', []);
+
+  app.controller('trendingController', function($scope, $http) {
+    $scope.url1 = 'https://image.tmdb.org/t/p/w200'; // Base URL for poster images
+    $scope.trendingMedia = []; // Array to store trending media
+
+    $scope.getTrending = function(type, duration) {
+      var url = `https://api.themoviedb.org/3/trending/${type}/` + duration + '?language=en-US&api_key=YOUR_API_KEY';
+
+      $http.get(url)
+        .then(function(response) {
+          $scope.trendingMedia = response.data.results;
+        })
+        .catch(function(error) {
+          console.error('Error fetching trending data', error);
+        });
+    };
+  });
+
+
+Now playing api
+https://api.themoviedb.org/3/movie/now_playing?api_key=974dff81c8800d9dac708b4882d8cbb5&language=en-US&page=1
+
+Popular movies api
+https://api.themoviedb.org/3/movie/popular?api_key=974dff81c8800d9dac708b4882d8cbb5&language=en-US&page=1

@@ -1,0 +1,93 @@
+/* CSS for the provided form */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+.authMainDiv {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("https://images4.alphacoders.com/133/1336451.jpg") no-repeat center center fixed;
+    background-size: cover;
+    opacity: .9;
+}
+
+.authDiv {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.0x1); /* Transparent background */
+    backdrop-filter: blur(10px); /* Apply a blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.registerHeading {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.fieldDiv {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.inp {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color:transparent;
+    color: white;
+}
+
+.inpBtn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.inpBtn:hover {
+    background-color:rgb(26, 57, 142);
+}
+
+p {
+    margin-top: 15px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+
+}
+
+a {
+    color: #087fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+h1,label,p{
+    font-weight: 500;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}

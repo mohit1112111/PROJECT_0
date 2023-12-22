@@ -1,0 +1,162 @@
+<div class="moviesMainDiv">
+  <!-- Navbar -->
+  <div class="navbar">
+    <!-- User-Email, Favourite and Logout -->
+    <div class="logoutPara">
+      <span>{{ userEmail }}</span>
+    </div>
+    <!-- serch bar -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search Movies...">
+      <span class="search-icon">&#128269;</span>
+    </div>
+
+    <!-- logout container -->
+    <div>
+      <button ng-click="handleLogout()">Logout</button>
+    </div>
+
+  </div>
+
+
+
+  <!-- carousel container -->
+  <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images7.alphacoders.com/134/1343245.jpeg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images4.alphacoders.com/133/1336451.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.alphacoders.com/133/1337271.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- All Movies -->
+  <div class="mainContainer">
+    <a ng-href="#/allTrendingMovies" class="trendingLink">All Movies</a>
+    <div class="trendingLinksContainer">
+      <select ng-model="selectedYear" ng-change="filterYearMovies()">
+        <option value="">Select a year</option>
+        <option ng-repeat="obj in yearsContainer" value="{{ obj.year }}">{{ obj.year }}</option>
+      </select>
+    
+      <select ng-model="selectedMovieType" ng-change="filterTypeMovies()">
+        <option value="">Select Movies</option>
+        <option value="IN">Bollywood movies</option>
+        <option value="US">Hollywood movies</option>
+      </select>
+
+      <button class="trendingButton" ng-click="getTrending('tv', 'day')">Language</button>
+      <button class="trendingButton" ng-click="getTrending('tv', 'week')">Country</button>
+      <!-- <button class="trendingButton" ng-click="getTrending('person', 'day')">Trending People (Day)</button> -->
+    </div>
+    <div class="trendingMovies">
+      <div ng-repeat="movie in allMovies" class="movie">
+        <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster">
+      </div>
+    </div>
+  </div>
+
+  <!-- Tranding movies,Tv shows, people,day,week container -->
+  <div class="mainContainer">
+    <a ng-href="#/allTrendingMovies" class="trendingLink">Trending Movies</a>
+    <div class="trendingLinksContainer">
+      <button class="trendingButton" ng-click="getTrending('movie', 'day')">Trending Movies (Day)</button>
+      <button class="trendingButton" ng-click="getTrending('movie', 'week')">Trending Movies (Week)</button>
+      <button class="trendingButton" ng-click="getTrending('tv', 'day')">Trending TV Shows (Day)</button>
+      <button class="trendingButton" ng-click="getTrending('tv', 'week')">Trending TV Shows (Week)</button>
+      <!-- <button class="trendingButton" ng-click="getTrending('person', 'day')">Trending People (Day)</button> -->
+    </div>
+    <div class="trendingMovies">
+      <div ng-repeat="movie in trendingMovies" class="movie">
+        <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster">
+      </div>
+    </div>
+  </div>
+  <!-- Now Playing movies container -->
+  <div class="mainContainer">
+    <div class="trendingContainer">
+      <a ng-href="#/allTrendingMovies" class="trendingLink">Now Playing</a>
+
+      <div class="trendingMovies">
+        <div ng-repeat="movie in nowplayingMovies" class="movie">
+          <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Now Upcoming movies container -->
+  <div class="mainContainer">
+    <div class="trendingContainer">
+      <a ng-href="#/allTrendingMovies" class="trendingLink">Upcoming</a>
+
+      <div class="trendingMovies">
+        <div ng-repeat="movie in upComingMovies" class="movie">
+          <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Popular movies container -->
+  <div class="mainContainer">
+    <div class="trendingContainer">
+      <a ng-href="#/allTrendingMovies" class="trendingLink">Popular Movies</a>
+
+      <div class="trendingMovies">
+        <div ng-repeat="movie in popularMovies" class="movie">
+          <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Top Rated movies container -->
+  <div class="mainContainer">
+    <div class="trendingContainer">
+      <a ng-href="#/allTrendingMovies" class="trendingLink">Top Rated</a>
+
+      <div class="trendingMovies">
+        <div ng-repeat="movie in topRatedMovies" class="movie">
+          <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tv shows container -->
+  <div class="mainContainer">
+    <div class="trendingContainer">
+      <a ng-href="#/allTrendingMovies" class="trendingLink">Tv Shows</a>
+
+      <div class="trendingMovies">
+        <div ng-repeat="movie in tvShows" class="movie">
+          <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footerContent">
+      <p>&copy; 2023 Movie App</p>
+      <ul class="socialIcons">
+        <li><a href="#" class="icon fab fa-facebook-f"></a></li>
+        <li><a href="#" class="icon fab fa-twitter"></a></li>
+        <li><a href="#" class="icon fab fa-instagram"></a></li>
+      </ul>
+    </div>
+  </footer>
+
+</div>

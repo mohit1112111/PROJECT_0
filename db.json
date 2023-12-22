@@ -1,0 +1,81 @@
+{
+  "users": [
+    {
+      "fullName": "Ankit Jha",
+      "email": "ankit@gmail.com",
+      "password": "123456",
+      "cPassword": "123456",
+      "id": 1
+    },
+    {
+      "fullName": "Anant Kumawat",
+      "email": "anantkumawat@gmail.com",
+      "password": "123456",
+      "cPassword": "123456",
+      "id": 2
+    },
+    {
+      "fullName": "Ujjwal Sharma",
+      "email": "ujjwal.sharma.cse47@gmail.com",
+      "password": "Ujjwal@123",
+      "cPassword": "Ujjwal@123",
+      "id": 3
+    },
+    {
+      "fullName": "Apoorv",
+      "email": "apoorv@gmail.com",
+      "password": "12345678",
+      "cPassword": "12345678",
+      "id": 4
+    },
+    {
+      "fullName": "ritik",
+      "email": "ritik@gmail.com",
+      "password": "123456",
+      "cPassword": "123456",
+      "id": 5
+    },
+    {
+      "fullName": "Anant Kumawat",
+      "email": "anant@gmail.com",
+      "password": "123456",
+      "cPassword": "123456",
+      "id": 6
+    },
+    {
+      "fullName": "Mohit Kumar",
+      "email": "mohit1112111@gmail.com",
+      "password": "1234561",
+      "cPassword": "1234561",
+      "id": 7
+    },
+    {
+      "fullName": "Mohit Kumar",
+      "email": "abc123@gmail.com",
+      "password": "abc123",
+      "cPassword": "abc123",
+      "id": 8
+    },
+    {
+      "fullName": "Shivani",
+      "email": "shivani@gmail.com",
+      "password": "121212",
+      "cPassword": "121212",
+      "id": 9
+    },
+    {
+      "fullName": "deepak",
+      "email": "deepak@gmail.com",
+      "password": "123123",
+      "cPassword": "123123",
+      "id": 10
+    },
+    {
+      "fullName": "sfsfdf",
+      "email": "sefsfesf@fh.com",
+      "password": "Deeksh@123",
+      "cPassword": "Deeksh@123",
+      "id": 11
+    }
+  ]
+}
