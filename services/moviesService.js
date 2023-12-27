@@ -127,6 +127,21 @@ app.service("moviesService", function ($http, $window, $location) {
 
     })
   }
+  // Fetch all  movies based on language
+  this.getMoviesBasedOnLang = function (languageCode,sendData) {
+  
+    $http({
+      method: "GET",
+      url:`https://api.themoviedb.org/3/discover/movie?api_key=974dff81c8800d9dac708b4882d8cbb5&language=${languageCode}`,
+    }).then((responce) => {
+
+      sendData(responce.data.results);
+    }).catch((error) => {
+      console.log("Get Movies Data - Error: ", error);
+      $location.path("/pageNotFound");
+
+    })
+  }
 
   // Fetch all trending movies data
   this.getAllTrendingMovies = function (sendData) {

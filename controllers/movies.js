@@ -4,7 +4,7 @@ app.controller("moviesCtrl", [
   "$window",
   "particularMovieService",
   "$location",
-  function (sc, moviesService, $window, particularMovieService,$location) {
+  function (sc, moviesService, $window, particularMovieService, $location) {
     // Check if user login or not.
     var checkAuth = $window.localStorage.getItem("user");
     if (!checkAuth) {
@@ -41,7 +41,7 @@ app.controller("moviesCtrl", [
         } else {
           sc.Results = "No Results Found"
           $location.path("/pageNotFound");
-          
+
         }
       })
     };
@@ -140,6 +140,29 @@ app.controller("moviesCtrl", [
       })
 
     }
+    // Hendle movies based on popularLanguages
+
+    sc.popularLanguages = [
+      { name: 'English', code: 'en' },
+      { name: 'Spanish', code: 'es' },
+      { name: 'Mandarin Chinese', code: 'zh' },
+      { name: 'Hindi', code: 'hi' },
+      { name: 'French', code: 'fr' },
+      { name: 'Japanese', code: 'ja' },
+      { name: 'Korean', code: 'ko' },
+      { name: 'German', code: 'de' },
+      { name: 'Russian', code: 'ru' },
+      { name: 'Italian', code: 'it' },
+
+    ];
+    sc.hendleMoviesLanguage = function () {
+      sc.language = sc.language;
+      moviesService.getMoviesBasedOnLang(sc.language, function (data) {
+        sc.allMovies = data;
+      })
+
+    }
+
 
     // Sort Movies Hendling
     sc.sortMovies = [
@@ -240,6 +263,9 @@ app.controller("moviesCtrl", [
     sc.handleWatchList = function () {
       moviesService.goToWatchlist();
     };
+
+
+
 
 
 

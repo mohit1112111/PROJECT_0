@@ -94,10 +94,16 @@
         <option ng-repeat="sortingType in sortMovies" value="{{sortingType.access}}">{{sortingType.type}}</option>
 
       </select>
-      <!-- Select movies based on popularity,revanue etc -->
+      <!-- Select movies based on movies type-->
       <select ng-model="genreId" ng-change="hendleGeneresMovies()">
         <option value="">Movies Type</option>
         <option ng-repeat="genre in genres" value="{{genre.id}}">{{genre.name}}</option>
+
+      </select>
+      <!-- Select movies based on language-->
+      <select ng-model="language" ng-change="hendleMoviesLanguage()">
+        <option value="">Movies Language</option>
+        <option ng-repeat="lang in popularLanguages" value="{{lang.code}}">{{lang.name}}</option>
 
       </select>
 

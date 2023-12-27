@@ -2,7 +2,7 @@
     
     <div class="movieImage">
 
-        <img ng-src="{{ url1+receivedData.poster_path }}" alt="...">
+        <img ng-src="{{ url1+receivedData.poster_path }}" alt="..." ng-click="fetchTrailer(receivedData.id)">
     </div>
     <div class="movieData">
         <!-- <h2 class="movieTitle">Movie Original Name : {{ receivedData.original_name ||      receivedData.original_title }}</h2> -->
@@ -14,6 +14,9 @@
         <p>Popularity: {{ receivedData.popularity }}</p>
         <p>Vote average: {{ receivedData.vote_average }}</p>
         <p>Vote count: {{ receivedData.vote_count }}</p>
+        <p style="cursor: pointer;"><a ng-href="{{trailerUrl}}" target="_blank">Click here to watch trailer</a></p>
+        
     </div>
+
 </div>
 

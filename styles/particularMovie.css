@@ -20,6 +20,7 @@
   .movieImage {
     flex: 0 0 30%;
     margin-right: 20px;
+    cursor: pointer;
   }
 
   .movieImage img {
@@ -28,6 +29,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    cursor: pointer;
   }
 
   .movieImage img:hover {
