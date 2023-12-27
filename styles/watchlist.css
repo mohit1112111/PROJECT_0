@@ -1,0 +1,108 @@
+    /* Basic styling for the container */
+    .watchlistMainDiv {
+      width:100%;
+      padding: 20px;
+      height: 100%;
+      color: white;
+      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+    }
+
+    /* Styling for the back button */
+    .backPara {
+      background-color: #555;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-family: Arial, sans-serif;
+      margin-left: 29px;
+    }
+
+    .backPara:hover {
+      background-color:black;
+    }
+
+    /* Styling for the watchlist movies section */
+    .moviesMainContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .linkButton {
+      text-decoration: none;
+      color: white;
+      font-size: 24px;
+      margin-bottom: 15px;
+      margin-left: 29px;
+      transition: color 0.3s ease;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    
+    .linkButton:hover {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    /* Styling for individual movie items */
+    .MoviesItmes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .movie {
+      margin: 10px;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .movie img {
+      width: 200px;
+      height: 300px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .movie img:hover {
+      transform: scale(1.05);
+    }
+
+    .watchlistButton {
+      position: absolute;
+      bottom: 5px;
+      right: 5.5px;
+      background-color: #ff3333;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .movie:hover .watchlistButton {
+      opacity: 1;
+    }
+
+    /* Animation for removing from watchlist */
+    .removeAnimation {
+      animation: fadeOut 0.5s ease forwards;
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    }

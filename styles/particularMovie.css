@@ -1,0 +1,49 @@
+   /* Basic styling for the container */
+   .receivedDataDetails {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color:black;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .receivedDataDetails:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Styling for movie details */
+  .movieImage {
+    flex: 0 0 30%;
+    margin-right: 20px;
+  }
+
+  .movieImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .movieImage img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .movieData {
+    flex: 0 0 60%;
+  }
+
+  .movieTitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .movieData p {
+    margin-bottom: 5px;
+  }

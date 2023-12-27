@@ -1,0 +1,19 @@
+<div class="receivedDataDetails">
+    
+    <div class="movieImage">
+
+        <img ng-src="{{ url1+receivedData.poster_path }}" alt="...">
+    </div>
+    <div class="movieData">
+        <!-- <h2 class="movieTitle">Movie Original Name : {{ receivedData.original_name ||      receivedData.original_title }}</h2> -->
+        <p>Name: {{ receivedData.name ||receivedData.title }}</p>
+        <p>Overview: {{ receivedData.overview }}</p>
+        <p>Release date: {{ receivedData.release_date }}</p>
+
+        <p>Original language: {{ receivedData.original_language }}</p>
+        <p>Popularity: {{ receivedData.popularity }}</p>
+        <p>Vote average: {{ receivedData.vote_average }}</p>
+        <p>Vote count: {{ receivedData.vote_count }}</p>
+    </div>
+</div>
+

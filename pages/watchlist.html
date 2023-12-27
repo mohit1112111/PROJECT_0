@@ -1,0 +1,30 @@
+<div class="watchlistMainDiv">
+  <!-- Back - To movies page -->
+  <button class="backPara" ng-click="backTomoviesPage()">
+    <i class="fa fa-angle-left" style="margin-right: 5px"></i> back
+  </button>
+
+  <!-- Show when there is no item in watchlist. -->
+  <div ng-if="!watchListMovies.length" style="color: white; font-size: 20px;">
+    No watchlist Items.
+  </div>
+
+  <!-- watchlist movies -->
+  <div class="moviesMainContainer">
+    <div class="moviesContainer">
+      <a href="" class="linkButton" ng-if="watchListMovies.length">Movies Watchlist </a>
+
+      <div class="MoviesItmes">
+        <div ng-repeat="movie in watchListMovies" class="movie">
+          <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster" ng-click="handleOnClick(movie)">
+          <button ng-click="handleRemoveMovie(movie)" class="watchlistButton">
+            
+            <span>Remove Watchlist</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</div>

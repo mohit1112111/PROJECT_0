@@ -76,6 +76,347 @@
       "password": "Deeksh@123",
       "cPassword": "Deeksh@123",
       "id": 11
+    },
+    {
+      "fullName": "qw",
+      "email": "qw@gmail.com",
+      "password": "111111",
+      "cPassword": "111111",
+      "id": 12
+    }
+  ],
+  "watchlist": [
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [],
+      "id": 507303,
+      "original_language": "pa",
+      "original_title": "Chadi Jawani Budhe Nu",
+      "overview": "A small-time businessman (B.S. Sood) reaches the \"naughty forties\". Now his wife is not good enough anymore, so he decides he needs a modern up to date mistress, resulting in hilarious situations.",
+      "popularity": 0.689,
+      "poster_path": "/6xg0TpxSSTkSaDJ7M1zmMHspERL.jpg",
+      "release_date": "1976-01-01",
+      "title": "Chadi Jawani Budhe Nu",
+      "video": false,
+      "vote_average": 6,
+      "vote_count": 1,
+      "userEmail": "mohit1112111@gmail.com"
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2M8XdhmGJ6AHZ6Rm0VBIUyaq5Qq.jpg",
+      "genre_ids": [
+        28,
+        80,
+        18
+      ],
+      "id": 781732,
+      "original_language": "hi",
+      "original_title": "Animal",
+      "overview": "A son undergoes a remarkable transformation as the bond with his father begins to fracture, and he becomes consumed by a quest for vengeance.",
+      "popularity": 89.42,
+      "poster_path": "/3qOkaupB7AIqzVbMQJlOU8eZyUk.jpg",
+      "release_date": "2023-12-01",
+      "title": "Animal",
+      "video": false,
+      "vote_average": 7.3,
+      "vote_count": 34,
+      "userEmail": "mohit1112111@gmail.com"
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2QL5j6mB4ZpyBcVr0WO9H9MQGBu.jpg",
+      "genre_ids": [
+        28,
+        12,
+        18,
+        14
+      ],
+      "id": 734253,
+      "original_language": "hi",
+      "original_title": "आदिपुरुष",
+      "overview": "7000 years ago, Ayodhya's Prince Raghava and Prince Sesh along with the Mighty Vanar Warriors travels to the island of Lanka with an aim to rescue Raghava's wife Janaki, who has been abducted by Lankesh, the king of Lanka.",
+      "popularity": 81.373,
+      "poster_path": "/1H2xEZOixs0z0JKwyjANZiKNNVJ.jpg",
+      "release_date": "2023-06-16",
+      "title": "Adipurush",
+      "video": false,
+      "vote_average": 5.3,
+      "vote_count": 64,
+      "userEmail": "mohit1112111@gmail.com"
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/yOm993lsJyPmBodlYjgpPwBjXP9.jpg",
+      "genre_ids": [
+        35,
+        10751,
+        14
+      ],
+      "id": 787699,
+      "original_language": "en",
+      "original_title": "Wonka",
+      "overview": "Willy Wonka – chock-full of ideas and determined to change the world one delectable bite at a time – is proof that the best things in life begin with a dream, and if you’re lucky enough to meet Willy Wonka, anything is possible.",
+      "popularity": 947.54,
+      "poster_path": "/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
+      "release_date": "2023-12-06",
+      "title": "Wonka",
+      "video": false,
+      "vote_average": 7.196,
+      "vote_count": 508,
+      "userEmail": "mohit1112111@gmail.com"
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5a4JdoFwll5DRtKMe7JLuGQ9yJm.jpg",
+      "id": 695721,
+      "title": "The Hunger Games: The Ballad of Songbirds & Snakes",
+      "original_language": "en",
+      "original_title": "The Hunger Games: The Ballad of Songbirds & Snakes",
+      "overview": "64 years before he becomes the tyrannical president of Panem, Coriolanus Snow sees a chance for a change in fortunes when he mentors Lucy Gray Baird, the female tribute from District 12.",
+      "poster_path": "/mBaXZ95R2OxueZhvQbcEWy2DqyO.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        18,
+        878,
+        28
+      ],
+      "popularity": 2786.228,
+      "release_date": "2023-11-15",
+      "video": false,
+      "vote_average": 7.217,
+      "vote_count": 973,
+      "userEmail": "mohit1112111@gmail.com"
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/bWIIWhnaoWx3FTVXv6GkYDv3djL.jpg",
+      "genre_ids": [
+        878,
+        27,
+        28
+      ],
+      "id": 940721,
+      "original_language": "ja",
+      "original_title": "ゴジラ-1.0",
+      "overview": "In postwar Japan, a new terror rises. Will the devastated people be able to survive... let alone fight back?",
+      "popularity": 297.839,
+      "poster_path": "/hkxxMIGaiCTmrEArK7J56JTKUlB.jpg",
+      "release_date": "2023-11-03",
+      "title": "Godzilla Minus One",
+      "video": false,
+      "vote_average": 8.056,
+      "vote_count": 171,
+      "userEmail": "mohit1112111@gmail.com"
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ipmUfBf3RxIdATbYI4CcPlnTsWs.jpg",
+      "id": 930564,
+      "title": "Saltburn",
+      "original_language": "en",
+      "original_title": "Saltburn",
+      "overview": "Struggling to find his place at Oxford University, student Oliver Quick finds himself drawn into the world of the charming and aristocratic Felix Catton, who invites him to Saltburn, his eccentric family's sprawling estate, for a summer never to be forgotten.",
+      "poster_path": "/qjhahNLSZ705B5JP92YMEYPocPz.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        18,
+        35,
+        53
+      ],
+      "popularity": 268.461,
+      "release_date": "2023-11-16",
+      "video": false,
+      "vote_average": 7.203,
+      "vote_count": 158,
+      "userEmail": "mohit1112111@gmail.com"
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/9jPoyxjiEYPylUIMI3Ntixf8z3M.jpg",
+      "genre_ids": [
+        16,
+        12,
+        35,
+        10751
+      ],
+      "id": 520758,
+      "original_language": "en",
+      "original_title": "Chicken Run: Dawn of the Nugget",
+      "overview": "A band of fearless chickens flock together to save poultry-kind from an unsettling new threat: a nearby farm that's cooking up something suspicious.",
+      "popularity": 770.14,
+      "poster_path": "/exNtEY8QUuQh9e23wSQjkPxKIU3.jpg",
+      "release_date": "2023-12-08",
+      "title": "Chicken Run: Dawn of the Nugget",
+      "video": false,
+      "vote_average": 7.579,
+      "vote_count": 254,
+      "userEmail": "mohit1112111@gmail.com"
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/r9oTasGQofvkQY5vlUXglneF64Z.jpg",
+      "genre_ids": [
+        28,
+        35
+      ],
+      "id": 1029575,
+      "original_language": "en",
+      "original_title": "The Family Plan",
+      "overview": "Dan Morgan is many things: a devoted husband, a loving father, a celebrated car salesman. He's also a former assassin. And when his past catches up to his present, he's forced to take his unsuspecting family on a road trip unlike any other.",
+      "popularity": 1456.867,
+      "poster_path": "/jLLtx3nTRSLGPAKl4RoIv1FbEBr.jpg",
+      "release_date": "2023-12-14",
+      "title": "The Family Plan",
+      "video": false,
+      "vote_average": 7.515,
+      "vote_count": 324,
+      "userEmail": "mohit1112111@gmail.com"
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3f92DMBTFqr3wgXpfxzrb0qv8nG.jpg",
+      "genre_ids": [
+        18,
+        36,
+        10752
+      ],
+      "id": 424,
+      "original_language": "en",
+      "original_title": "Schindler's List",
+      "overview": "The true story of how businessman Oskar Schindler saved over a thousand Jewish lives from the Nazis while they worked as slaves in his factory during World War II.",
+      "popularity": 62.71,
+      "poster_path": "/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
+      "release_date": "1993-12-15",
+      "title": "Schindler's List",
+      "video": false,
+      "vote_average": 8.573,
+      "vote_count": 14907,
+      "userEmail": "mohit1112111@gmail.com"
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg",
+      "genre_ids": [
+        18,
+        80
+      ],
+      "id": 278,
+      "original_language": "en",
+      "original_title": "The Shawshank Redemption",
+      "overview": "Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
+      "popularity": 108.562,
+      "poster_path": "/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
+      "release_date": "1994-09-23",
+      "title": "The Shawshank Redemption",
+      "video": false,
+      "vote_average": 8.707,
+      "vote_count": 25166,
+      "userEmail": "mohit1112111@gmail.com"
+    },
+    {
+      "backdrop_path": "/mc3rG5M9dFVjMfaCFNfbD5gu2pK.jpg",
+      "first_air_date": "2005-02-06",
+      "genre_ids": [
+        16,
+        35
+      ],
+      "id": 1433,
+      "name": "American Dad!",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "American Dad!",
+      "overview": "The series focuses on an eccentric motley crew that is the Smith family and their three housemates: Father, husband, and breadwinner Stan Smith; his better half housewife, Francine Smith; their college-aged daughter, Hayley Smith; and their high-school-aged son, Steve Smith. Outside of the Smith family, there are three additional main characters, including Hayley's boyfriend turned husband, Jeff Fischer; the family's man-in-a-goldfish-body pet, Klaus; and most notably the family's zany alien, Roger, who is \"full of masquerades, brazenness, and shocking antics.\"",
+      "popularity": 5596.75,
+      "poster_path": "/xnFFz3etm1vftF0ns8RMHA8XdqT.jpg",
+      "vote_average": 7,
+      "vote_count": 1924,
+      "userEmail": "mohit1112111@gmail.com"
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/qqHQsStV6exghCM7zbObuYBiYxw.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 389,
+      "original_language": "en",
+      "original_title": "12 Angry Men",
+      "overview": "The defense and the prosecution have rested and the jury is filing into the jury room to decide if a young Spanish-American is guilty or innocent of murdering his father. What begins as an open and shut case soon becomes a mini-drama of each of the jurors' prejudices and preconceptions about the trial, the accused, and each other.",
+      "popularity": 46.382,
+      "poster_path": "/ow3wq89wM8qd5X7hWKxiRfsFf9C.jpg",
+      "release_date": "1957-04-10",
+      "title": "12 Angry Men",
+      "video": false,
+      "vote_average": 8.545,
+      "vote_count": 7877,
+      "userEmail": "mohit1112111@gmail.com"
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/S3EIcOUQYxgd3QzjOo2rZJ2MN8.jpg",
+      "genre_ids": [
+        28,
+        18,
+        10752
+      ],
+      "id": 554600,
+      "original_language": "hi",
+      "original_title": "Uri: The Surgical Strike",
+      "overview": "Following the roguish terrorist attacks at Uri Army Base camp in Kashmir, India takes the fight to the enemy, in its most successful covert operation till date with one and only one objective of avenging their fallen heroes.",
+      "popularity": 230.33,
+      "poster_path": "/yNySAgpAnWmPpYinim9E0tUzJWG.jpg",
+      "release_date": "2019-01-11",
+      "title": "Uri: The Surgical Strike",
+      "video": false,
+      "vote_average": 7.2,
+      "vote_count": 324,
+      "userEmail": "mohit1112111@gmail.com"
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5R19VzUX3unBGgWAMmCJKLcOsbo.jpg",
+      "genre_ids": [
+        35,
+        18
+      ],
+      "id": 960876,
+      "original_language": "hi",
+      "original_title": "डंकी",
+      "overview": "Four friends from a sleepy little village in Punjab share a common dream: to go to England. Their problem is that they have neither the visa nor the ticket. A soldier alights from a train one day, and their lives change. He gives them a soldier's promise: He will take them to the land of their dreams. What follows is a hilarious and heartwarming tale of a perilous journey through the desert and the sea, but most crucially through the hinterlands of their mind.",
+      "popularity": 65.799,
+      "poster_path": "/kPRb1mbVHGop0egQ7153y0lhzGL.jpg",
+      "release_date": "2023-12-21",
+      "title": "Dunki",
+      "video": false,
+      "vote_average": 7.4,
+      "vote_count": 14,
+      "userEmail": "mohit1112111@gmail.com"
+    },
+    {
+      "backdrop_path": "/nVRyd8hlg0ZLxBn9RaI7mUMQLnz.jpg",
+      "first_air_date": "2005-09-13",
+      "genre_ids": [
+        18,
+        9648,
+        10765
+      ],
+      "id": 1622,
+      "name": "Supernatural",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Supernatural",
+      "overview": "When they were boys, Sam and Dean Winchester lost their mother to a mysterious and demonic supernatural force. Subsequently, their father raised them to be soldiers. He taught them about the paranormal evil that lives in the dark corners and on the back roads of America ... and he taught them how to kill it. Now, the Winchester brothers crisscross the country in their '67 Chevy Impala, battling every kind of supernatural threat they encounter along the way. ",
+      "popularity": 3784.816,
+      "poster_path": "/KoYWXbnYuS3b0GyQPkbuexlVK9.jpg",
+      "vote_average": 8.3,
+      "vote_count": 7034,
+      "userEmail": "mohit1112111@gmail.com"
     }
   ]
 }

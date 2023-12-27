@@ -11,10 +11,14 @@ app.config(function ($routeProvider) {
       templateUrl: "movies.html",
       controller: "moviesCtrl",
     })
-    // .when("/favourite", {
-    //   templateUrl: "favourite.html",
-    //   controller: "favouriteCtrl",
-    // })
+    .when("/particularMovie", {
+      templateUrl: "particularMovie.html",
+      controller: "particularMovieCtrl",
+    })
+    .when("/watchlist", {
+      templateUrl: "watchlist.html",
+      controller: "watchlistCtrl",
+    })
     .when("/register", {
       templateUrl: "register.html",
       controller: "registerCtrl",
@@ -22,6 +26,10 @@ app.config(function ($routeProvider) {
     .when("/login", {
       templateUrl: "login.html",
       controller: "loginCtrl",
+    })
+    .when("/pageNotFound", {
+      templateUrl: "pageNotFound.html",
+      // controller: "loginCtrl",
     })
     .otherwise({
       redirectTo: "/",

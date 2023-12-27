@@ -1,20 +1,25 @@
 <div class="moviesMainDiv">
   <!-- Navbar -->
   <div class="navbar">
-    <!-- User-Email, Favourite and Logout -->
+    <!-- User-Email, watchlist and Logout -->
     <div class="logoutPara">
       <span>{{ userEmail }}</span>
     </div>
     <!-- serch bar -->
     <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Search Movies...">
+      <input type="text" id="searchInput" placeholder="Search Movies,Tv Shows...">
       <span class="search-icon">&#128269;</span>
     </div>
 
+    <!-- watch list movies button-->
+    <div>
+      <button ng-click="handleWatchList()" >Movies Watchlist </button>
+    </div>
     <!-- logout container -->
     <div>
       <button ng-click="handleLogout()">Logout</button>
     </div>
+
 
   </div>
 
@@ -24,7 +29,7 @@
   <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://images7.alphacoders.com/134/1343245.jpeg" class="d-block w-100" alt="...">
+        <img src="https://images4.alphacoders.com/653/653613.jpg" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
         <img src="https://images4.alphacoders.com/133/1336451.jpg" class="d-block w-100" alt="...">
@@ -42,57 +47,106 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+  <!--  movies Based on search bar container -->
+  <div class="mainContainer" ng-if="showSearchContainer">
+    <div class="trendingContainer">
+      <a href="" class="trendingLink">{{Results}}</a>
 
+      <div class="trendingMovies">
+        <div ng-repeat="movie in allSearchedMovies" class="movie">
+          <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster" ng-click="handleOnClick(movie)">
+          <button ng-click="toggleWatchList(movie)" class="watchlistButton"
+            ng-class="{'watchlisted': isWatchListed(movie)}">
+            <span ng-if="!isWatchListed(movie)">Add to Watchlist</span>
+            <span ng-if="isWatchListed(movie)">Remove from Watchlist</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- All Movies -->
   <div class="mainContainer">
-    <a ng-href="#/allTrendingMovies" class="trendingLink">All Movies</a>
+    <a href="" class="trendingLink">All Movies</a>
     <div class="trendingLinksContainer">
+      <!-- Select movies based on years -->
       <select ng-model="selectedYear" ng-change="filterYearMovies()">
         <option value="">Select a year</option>
-        <option ng-repeat="obj in yearsContainer" value="{{ obj.year }}">{{ obj.year }}</option>
-      </select>
-    
-      <select ng-model="selectedMovieType" ng-change="filterTypeMovies()">
-        <option value="">Select Movies</option>
-        <option value="IN">Bollywood movies</option>
-        <option value="US">Hollywood movies</option>
+        <option ng-repeat="year in yearsContainer" value="{{year.year}}">{{ year.year }}</option>
       </select>
 
-      <button class="trendingButton" ng-click="getTrending('tv', 'day')">Language</button>
-      <button class="trendingButton" ng-click="getTrending('tv', 'week')">Country</button>
-      <!-- <button class="trendingButton" ng-click="getTrending('person', 'day')">Trending People (Day)</button> -->
+      <!-- Select movies based on years -->
+      <select ng-model="selectedMovieType" ng-change="filterTypeMovies()">
+        <option value="">Select Movies</option>
+        <option value="IN">Bollywood</option>
+        <option value="US">Hollywood</option>
+      </select>
+
+
+      <!-- Select movies based on countries -->
+      <select ng-model="selectedCountry" ng-change="filterCountryMovies()">
+        <option value="">Select Country</option>
+        <option ng-repeat="country in popularCountries" value="{{country.code}}">{{country.country}}</option>
+
+      </select>
+      <!-- Select movies based on popularity,revanue etc -->
+      <select ng-model="sortType" ng-change="hendleSortMovies()">
+        <option value="">Sort Movies</option>
+        <option ng-repeat="sortingType in sortMovies" value="{{sortingType.access}}">{{sortingType.type}}</option>
+
+      </select>
+      <!-- Select movies based on popularity,revanue etc -->
+      <select ng-model="genreId" ng-change="hendleGeneresMovies()">
+        <option value="">Movies Type</option>
+        <option ng-repeat="genre in genres" value="{{genre.id}}">{{genre.name}}</option>
+
+      </select>
+
+
     </div>
     <div class="trendingMovies">
       <div ng-repeat="movie in allMovies" class="movie">
-        <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster">
+        <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster" ng-click="handleOnClick(movie)">
+        <button ng-click="toggleWatchList(movie)" class="watchlistButton">
+          <span>Add to Watchlist</span>
+          <!-- <span ng-if="isWatchListed(movie">Remove from Watchlist</span> -->
+        </button>
       </div>
     </div>
   </div>
 
   <!-- Tranding movies,Tv shows, people,day,week container -->
   <div class="mainContainer">
-    <a ng-href="#/allTrendingMovies" class="trendingLink">Trending Movies</a>
+    <a href="" class="trendingLink">Trending Movies</a>
     <div class="trendingLinksContainer">
       <button class="trendingButton" ng-click="getTrending('movie', 'day')">Trending Movies (Day)</button>
       <button class="trendingButton" ng-click="getTrending('movie', 'week')">Trending Movies (Week)</button>
       <button class="trendingButton" ng-click="getTrending('tv', 'day')">Trending TV Shows (Day)</button>
       <button class="trendingButton" ng-click="getTrending('tv', 'week')">Trending TV Shows (Week)</button>
-      <!-- <button class="trendingButton" ng-click="getTrending('person', 'day')">Trending People (Day)</button> -->
     </div>
     <div class="trendingMovies">
       <div ng-repeat="movie in trendingMovies" class="movie">
-        <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster">
+        <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster" ng-click="handleOnClick(movie)">
+        <button ng-click="toggleWatchList(movie)" class="watchlistButton"
+          ng-class="{'watchlisted': isWatchListed(movie)}">
+          <span ng-if="!isWatchListed(movie)">Add to Watchlist</span>
+          <span ng-if="isWatchListed(movie)">Remove from Watchlist</span>
+        </button>
       </div>
     </div>
   </div>
   <!-- Now Playing movies container -->
   <div class="mainContainer">
     <div class="trendingContainer">
-      <a ng-href="#/allTrendingMovies" class="trendingLink">Now Playing</a>
+      <a href="" class="trendingLink">Now Playing</a>
 
       <div class="trendingMovies">
         <div ng-repeat="movie in nowplayingMovies" class="movie">
-          <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster">
+          <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster" ng-click="handleOnClick(movie)">
+          <button ng-click="toggleWatchList(movie)" class="watchlistButton"
+            ng-class="{'watchlisted': isWatchListed(movie)}">
+            <span ng-if="!isWatchListed(movie)">Add to Watchlist</span>
+            <span ng-if="isWatchListed(movie)">Remove from Watchlist</span>
+          </button>
         </div>
       </div>
     </div>
@@ -100,11 +154,16 @@
   <!-- Now Upcoming movies container -->
   <div class="mainContainer">
     <div class="trendingContainer">
-      <a ng-href="#/allTrendingMovies" class="trendingLink">Upcoming</a>
+      <a href="" class="trendingLink">Upcoming</a>
 
       <div class="trendingMovies">
         <div ng-repeat="movie in upComingMovies" class="movie">
-          <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster">
+          <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster" ng-click="handleOnClick(movie)">
+          <button ng-click="toggleWatchList(movie)" class="watchlistButton"
+            ng-class="{'watchlisted': isWatchListed(movie)}">
+            <span ng-if="!isWatchListed(movie)">Add to Watchlist</span>
+            <span ng-if="isWatchListed(movie)">Remove from Watchlist</span>
+          </button>
         </div>
       </div>
     </div>
@@ -112,11 +171,16 @@
   <!-- Popular movies container -->
   <div class="mainContainer">
     <div class="trendingContainer">
-      <a ng-href="#/allTrendingMovies" class="trendingLink">Popular Movies</a>
+      <a href=""class="trendingLink">Popular Movies</a>
 
       <div class="trendingMovies">
         <div ng-repeat="movie in popularMovies" class="movie">
-          <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster">
+          <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster" ng-click="handleOnClick(movie)">
+          <button ng-click="toggleWatchList(movie)" class="watchlistButton"
+            ng-class="{'watchlisted': isWatchListed(movie)}">
+            <span ng-if="!isWatchListed(movie)">Add to Watchlist</span>
+            <span ng-if="isWatchListed(movie)">Remove from Watchlist</span>
+          </button>
         </div>
       </div>
     </div>
@@ -124,11 +188,16 @@
   <!-- Top Rated movies container -->
   <div class="mainContainer">
     <div class="trendingContainer">
-      <a ng-href="#/allTrendingMovies" class="trendingLink">Top Rated</a>
+      <a href="" class="trendingLink">Top Rated</a>
 
       <div class="trendingMovies">
         <div ng-repeat="movie in topRatedMovies" class="movie">
-          <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster">
+          <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster" ng-click="handleOnClick(movie)">
+          <button ng-click="toggleWatchList(movie)" class="watchlistButton"
+            ng-class="{'watchlisted': isWatchListed(movie)}">
+            <span ng-if="!isWatchListed(movie)">Add to Watchlist</span>
+            <span ng-if="isWatchListed(movie)">Remove from Watchlist</span>
+          </button>
         </div>
       </div>
     </div>
@@ -137,11 +206,16 @@
   <!-- Tv shows container -->
   <div class="mainContainer">
     <div class="trendingContainer">
-      <a ng-href="#/allTrendingMovies" class="trendingLink">Tv Shows</a>
+      <a href="" class="trendingLink">Tv Shows</a>
 
       <div class="trendingMovies">
         <div ng-repeat="movie in tvShows" class="movie">
-          <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster">
+          <img ng-src="{{url1+movie.poster_path}}" alt="Movie Poster" ng-click="handleOnClick(movie)">
+          <button ng-click="toggleWatchList(movie)" class="watchlistButton"
+            ng-class="{'watchlisted': isWatchListed(movie)}">
+            <span ng-if="!isWatchListed(movie)">{{toggle}}</span>
+            <!-- <span ng-if="isWatchListed(movie)">Remove from Watchlist</span> -->
+          </button>
         </div>
       </div>
     </div>
@@ -150,11 +224,16 @@
   <!-- Footer Section -->
   <footer class="footer">
     <div class="footerContent">
-      <p>&copy; 2023 Movie App</p>
+
+      <p>&copy; <a ng-href="https://developer.themoviedb.org/reference/intro/getting-started" target="_blank">TMDB
+          References</a></p>
       <ul class="socialIcons">
-        <li><a href="#" class="icon fab fa-facebook-f"></a></li>
-        <li><a href="#" class="icon fab fa-twitter"></a></li>
-        <li><a href="#" class="icon fab fa-instagram"></a></li>
+        <li><a ng-href="https://www.linkedin.com/in/mohit-kumar-a00571228/" target="_blank"
+            class="icon fab fa-linkedin-in"></a></li>
+        <li><a ng-href="https://twitter.com/Mohit_SMS_007?t=2snsrPzhEcbdP5ymLAFvrw&s=09" target="_blank"
+            class="icon fab fa-twitter"></a></li>
+        <li><a ng-href="https://www.instagram.com/mohit.parjapati.777/" class="icon fab fa-instagram"
+            target="_blank"></a></li>
       </ul>
     </div>
   </footer>
