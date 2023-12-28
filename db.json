@@ -83,6 +83,13 @@
       "password": "111111",
       "cPassword": "111111",
       "id": 12
+    },
+    {
+      "fullName": "Bharat",
+      "email": "bharat123@gmail.com",
+      "password": "M@123456abc",
+      "cPassword": "M@123456abc",
+      "id": 13
     }
   ],
   "watchlist": [
