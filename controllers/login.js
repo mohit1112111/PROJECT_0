@@ -37,7 +37,7 @@ app.controller("loginCtrl", [
         alert("Password shouldn't contain any space.");
         return;
       }
-
+//hi
       // Fetch all registered users to check login credentials.
       loginService.getUsers(function (data) {
         sc.user = data.filter((data) => {
