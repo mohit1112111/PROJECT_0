@@ -52,13 +52,16 @@ app.controller("registerCtrl", [
 
       // check password
       if (!passRegex.test(sc.password)) {
-        alert("Password should contain special char,upperChar,lowerChar and numbers")
+        alert("Password should contain special char,upperChar,lowerChar and numbers.")
+        return;
+      }else if (sc.password.includes(" ")) {
+        alert("Password shouldn't contain any space.");
         return;
       }
 
       // confirm password check validation.
-      if (sc.cPassword.length < 6) {
-        alert("Confrim Password must contain atleast 6 characters.");
+      if (!passRegex.test(sc.password)) {
+        alert("Password should contain special char,upperChar,lowerChar and numbers.");
         return;
       } else if (sc.cPassword.includes(" ")) {
         alert("Confirm Password shouldn't contain any space.");

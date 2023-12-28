@@ -20,6 +20,7 @@ app.controller("loginCtrl", [
     sc.handleFormSubmit = () => {
       var validRegex =
         /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      var passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+={}\[\]:;<>,.?/~]).{6,}$/;
 
       // check email validation.
       if (!validRegex.test(sc.email)) {
@@ -27,9 +28,10 @@ app.controller("loginCtrl", [
         return;
       }
 
-      // password validation.
-      if (sc.password.length < 6) {
-        alert("Password must contain atleast 6 characters.");
+
+      // check password
+      if (!passRegex.test(sc.password)) {
+        alert("Password should contain special char,upperChar,lowerChar and numbers.")
         return;
       } else if (sc.password.includes(" ")) {
         alert("Password shouldn't contain any space.");
