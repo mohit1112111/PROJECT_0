@@ -31,7 +31,8 @@ This Movie Application is a platform where users can explore movies, watch trail
 ### 7. Movie Data
    - Retrieve detailed information about movies, including titles, genres, release dates, cast, ratings, etc.
    - Explore comprehensive movie data available in the application's database.
-     
+### 8. 404 Page not found
+
 ### etc
 
 ## Usage
